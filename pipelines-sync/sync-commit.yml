@@ -21,3 +21,4 @@ stages:
                 ./pipelines-sync/sync-commit.sh
             env:
               BRANCH_NAME: $(Build.SourceBranchName)
+              GITHUB_TOKEN: $(GitHubToken)
