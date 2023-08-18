@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo "Current Branch: $BRANCH_NAME"
+echo "token: $GITHUB_TOKEN"
 
-REPO_ORIGEM="https://$GITHUB_TOKEN@github.com/fit-helder/osb-test-sync-origin.git"
 REPO_DESTINO="https://$GITHUB_TOKEN@github.com/fit-helder/osb-test-sync-wl1.git"
 
 git remote add destino $REPO_DESTINO
