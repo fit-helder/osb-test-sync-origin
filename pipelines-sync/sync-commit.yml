@@ -17,7 +17,7 @@ stages:
             inputs:
               targetType: 'inline'
               script: |
-                echo "Branch: ${BRANCH}" 
+                echo "Branch: $BRANCH" 
                 chmod +x pipelines-sync/sync-commit.sh
                 ./pipelines-sync/sync-commit.sh
             env:
