@@ -12,7 +12,5 @@ steps:
     inputs:
       targetType: 'inline'
       script: |
-      ./sync-commit.sh
-
-
-
+        chmod +x ./sync-commit.sh
+        ./sync-commit.sh
