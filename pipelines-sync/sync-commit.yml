@@ -6,7 +6,8 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-stage: 
+stages:
+  - stage: SyncStage
     jobs:
       - job: sync
         pool:
@@ -16,5 +17,5 @@ stage:
             inputs:
               targetType: 'inline'
               script: |
-                chmod +x pipelines-sync/
-                ./pipeline-sync/sync-commit.yml
+                chmod +x pipelines-sync/sync-commit.sh
+                ./pipelines-sync/sync-commit.sh
