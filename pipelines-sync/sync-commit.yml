@@ -17,8 +17,8 @@ stages:
             inputs:
               targetType: 'inline'
               script: |
-                export BRANCH=$BRANCH 
+                export BRANCH_NAME=${BRANCH} 
                 chmod +x pipelines-sync/sync-commit.sh
                 ./pipelines-sync/sync-commit.sh
             env:
-              BRANCH: $(Build.SourceBranchName)
+              BRANCH_NAME: $(Build.SourceBranchName)
