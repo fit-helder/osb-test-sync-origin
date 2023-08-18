@@ -12,5 +12,6 @@ steps:
     inputs:
       targetType: 'inline'
       script: |
-        chmod +x ./sync-commit.sh
+        chmod +x ./pipelines-sync/sync-commit.sh
+        cd /pipelines-sync
         ./sync-commit.sh
