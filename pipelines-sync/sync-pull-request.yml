@@ -1,0 +1,15 @@
+pr:
+  branches:
+    include:
+    - '*'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: Bash@3
+    displayName: 'synchronizing the pull requests'
+    inputs:
+      targetType: 'inline'
+      script: |
+      ./

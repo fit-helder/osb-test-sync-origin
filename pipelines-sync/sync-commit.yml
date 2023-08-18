@@ -1,0 +1,18 @@
+trigger:
+  branches:
+    include:
+      - '*'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: Bash@3
+    displayName: 'synchronizing the commits'
+    inputs:
+      targetType: 'inline'
+      script: |
+      ./sync-commit.sh
+
+
+
