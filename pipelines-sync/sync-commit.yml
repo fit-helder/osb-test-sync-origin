@@ -6,12 +6,15 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-  - task: Bash@3
-    displayName: 'synchronizing the commits'
-    inputs:
-      targetType: 'inline'
-      script: |
-        chmod +x ./pipelines-sync/sync-commit.sh
-        cd /pipelines-sync
-        ./sync-commit.sh
+stage: 
+    jobs:
+      - job: sync
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - task: Bash@3
+            inputs:
+              targetType: 'inline'
+              script: |
+                chmod +x pipelines-sync/
+                ./pipeline-sync/sync-commit.yml
